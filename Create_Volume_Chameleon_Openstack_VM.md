@@ -28,8 +28,10 @@ sudo mkdir /mount_point
 4: Backup and copy new lines to /etc/fstab
 ```
 sudo cp /etc/fstab /etc/fstab.orig
-sudo cat "/dev/vdb       /mount_point   ext4    defaults,nofail        0       2" >> /etc/fstab
-cat /etc/fstab
+```
+Open `/etc/fstab` in a text editor (`sudo vi /etc/fstab` for example) and add this line.
+```
+/dev/vdb       /mount_point   ext4    defaults,nofail        0       2
 ```
 5: Mount the volume
 ```
