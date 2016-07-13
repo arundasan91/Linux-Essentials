@@ -17,6 +17,10 @@ This command should give you a similar output:
 ```
 /dev/vdb: Linux rev 1.0 ext4 filesystem data, UUID=49995f73-b1a9-412a-abec-9d6cf4d4d269 (needs journal recovery) (extents) (large files) (huge files)
 ```
+If you do not get a similar output, you need to create a new file system by formating the volume. To create a new file system:
+```
+sudo mkfs -t ext4 /dev/vdb
+```
 3: Create a new folder to mount the volume.
 ```
 sudo mkdir /mount_point
