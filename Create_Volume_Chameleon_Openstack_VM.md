@@ -5,7 +5,7 @@
 
 Once you have created a volume, attach it to an instance using the drop down menu towards the right and selecting `Manage Attachement`. 
 
-After attaching the Volume, you will get a device name. The device name can be seen under Attached to field. 
+After attaching the Volume, you will get a device name. The device name can be seen under `Attached to` field. 
 
 For example: `Attached to Arun_MPI_Learning_Node_3 on /dev/vd`. Here `/dev/vdb` is the device name. Keep a note of it, we need it in the next step.
 
