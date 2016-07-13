@@ -1,7 +1,13 @@
 #Create and attach a Volume in Chameleon Openstack VM. 
 ###Backup your data people :)
 
-1: First, you need to create a volume by going into your respective projects in Chameleon.Once you have it created, attach the volume to an instance using the drop down menu towards the right. After attaching the Volume, you will get a device name. The device name can be seen under Attached to field. For example: Attached to Arun_MPI_Learning_Node_3 on /dev/vd. Here /dev/vdb is the device name. Keep a note of it, we need it in the next step.
+1: First, you need to create a volume by going into your respective projects in Chameleon, choosing `Volume` from `Compute` Menu and choosing `+Create Volume`.
+
+Once you have created a volume, attach it to an instance using the drop down menu towards the right and selecting `Manage Attachement`. 
+
+After attaching the Volume, you will get a device name. The device name can be seen under Attached to field. 
+
+For example: `Attached to Arun_MPI_Learning_Node_3 on /dev/vd`. Here `/dev/vdb` is the device name. Keep a note of it, we need it in the next step.
 
 2: Make sure the volume is attached.
 ```
