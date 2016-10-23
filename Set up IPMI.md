@@ -67,20 +67,28 @@ Make note of the mac address corresponding to the default gateway IP. Update it 
 ```
 ipmitool lan set 8 defgw macaddr <macaddr_of_router>
 ```
-Now that we have set the necessary, we can set a BMC user and a password. To find the list of existing users, run:
+Now that we have set the necessary, we can set a BMC user and a password. To find the list of existing users, run:    
 ```
 ipmitool user list 8
 ```
-```
 
+To setup an user with password with different privillages:
+>Possible privilege levels are:    
+>   1   Callback level    
+>   2   User level    
+>   3   Operator level    
+>   4   Administrator level    
+>   5   OEM Proprietary level    
+>  15   No access    
+
+```
+ipmitool user set name 2 admin
 ipmitool user set password 2
-```
-```
+ipmitool channel setaccess 1 2 link=on ipmi=on callin=on privilege=4
 ipmitool lan set 8 arp respond on
 ipmitool lan set 8 auth ADMIN MD5
 ipmitool lan set 8 access on
-
-
-
-
 ```
+
+Reference
+[1] http://www.thomas-krenn.com/en/wiki/Configuring_IPMI_under_Linux_using_ipmitool
