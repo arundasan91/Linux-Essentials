@@ -44,7 +44,7 @@ Copy the string inside the single quotes, exit python and paste it like this in 
 
 Now, update the password in the config file.
 ```
-sudo sed -i "s|#c.NotebookApp.password = ''|c.NotebookApp.password = u'$NOTE_PWD'|g" /home/<USERNAME>/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|#c.NotebookApp.password = u''|c.NotebookApp.password = u'$NOTE_PWD'|g" /home/<USERNAME>/.jupyter/jupyter_notebook_config.py
 ```
 
 Now your notebook is configured.
