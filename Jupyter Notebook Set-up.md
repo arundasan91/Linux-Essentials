@@ -24,9 +24,9 @@ jupyter notebook --generate-config
 ```
 The following lines will change the configurations to lis
 ```
-sudo sed -i "s|#c.NotebookApp.ip = 'localhost'|c.NotebookApp.ip = '*'|g" /home/<USERNAME>/.jupyter/jupyter_notebook_config.py
-sudo sed -i "s|#c.NotebookApp.port = 8888|c.NotebookApp.port = 8888|g" /home/<USERNAME>/.jupyter/jupyter_notebook_config.py
-sudo sed -i "s|#c.NotebookApp.open_browser = True|c.NotebookApp.open_browser = False|g" /home/<USERNAME>/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|#c.NotebookApp.ip = 'localhost'|c.NotebookApp.ip = '*'|g" /home/$USER/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|#c.NotebookApp.port = 8888|c.NotebookApp.port = 8888|g" /home/$USER/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|#c.NotebookApp.open_browser = True|c.NotebookApp.open_browser = False|g" /home/$USER/.jupyter/jupyter_notebook_config.py
 ```
 
 
@@ -44,7 +44,7 @@ Copy the string inside the single quotes, exit python and paste it like this in 
 
 Now, update the password in the config file.
 ```
-sudo sed -i "s|#c.NotebookApp.password = u''|c.NotebookApp.password = u'$NOTE_PWD'|g" /home/<USERNAME>/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|#c.NotebookApp.password = u''|c.NotebookApp.password = u'$NOTE_PWD'|g" /home/$USER/.jupyter/jupyter_notebook_config.py
 ```
 
 Now your notebook is configured.
