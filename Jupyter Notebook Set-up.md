@@ -41,6 +41,13 @@ sudo sed -i "s|#c.NotebookApp.port = 8888|c.NotebookApp.port = 8888|g" /home/$US
 sudo sed -i "s|#c.NotebookApp.open_browser = True|c.NotebookApp.open_browser = False|g" /home/$USER/.jupyter/jupyter_notebook_config.py
 ```
 
+Sometimes the notebook configuration creates a different format of config file with `# c.Notebook` instead of `#c.Notebook`. In that case, use:
+
+```
+sudo sed -i "s|# c.NotebookApp.ip = 'localhost'|c.NotebookApp.ip = '*'|g" /home/$USER/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|# c.NotebookApp.port = 8888|c.NotebookApp.port = 8888|g" /home/$USER/.jupyter/jupyter_notebook_config.py
+sudo sed -i "s|# c.NotebookApp.open_browser = True|c.NotebookApp.open_browser = False|g" /home/$USER/.jupyter/jupyter_notebook_config.py
+```
 
 To generate a password,type in a `python` or `IPython` shell:
 ```
