@@ -22,7 +22,19 @@ We can also add a password to the notebook for better security as we are using t
 ```
 jupyter notebook --generate-config
 ```
-The following lines will change the configurations to lis
+
+If you get a `jupyter: command not found` error, do:
+```
+export PATH=$PATH:.local/bin/
+```
+or, add `export PATH=$PATH:.local/bin/` to your `~/.bashrc` file.
+
+The following lines will change the jupyter notebook default configurations.
+
+
+1. It changes notebook ip from localhost to all ip's in system.    
+2. It defaults the notebook port to 8888.    
+3. It makes sure a browser is not opened when we run jupyter notebook command.    
 ```
 sudo sed -i "s|#c.NotebookApp.ip = 'localhost'|c.NotebookApp.ip = '*'|g" /home/$USER/.jupyter/jupyter_notebook_config.py
 sudo sed -i "s|#c.NotebookApp.port = 8888|c.NotebookApp.port = 8888|g" /home/$USER/.jupyter/jupyter_notebook_config.py
