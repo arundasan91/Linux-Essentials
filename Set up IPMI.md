@@ -1,11 +1,5 @@
 #Tutorial: Set up IPMI in a server for Remote Access.
 
-
-# In progress
-
-
-
-
 ##IPMI: Basics
 Abbreviated as IPMI the Intelligent Platform Management Interface was primarily developed by Intel in 1998 for remote management of servers and/or other systems via a network connection. If the server has IPMI configured and is connected to a power supply, the system administrator can send a variety of commands over the network to the server remotely. These commands can, for example, query the power state, power down or power up a server without physically operating it.
 IPMI v2.0 allows Console Redirection with enhanced encryption and access control which provides system admins with the entire 'display' of boot process redirected to them via network. This is different than SSH in the sense that system admin can directly interact with the server during booting and even change bios settings like they are physically connected to the server. IMPI is closely tied with the Baseboard Management Card (BMC) system which are operational whenever the server is connected to a power source. Thus the remote capabilities.
