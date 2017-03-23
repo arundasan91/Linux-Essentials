@@ -1,17 +1,17 @@
-#Tutorial: Set up IPMI in a server for Remote Access.
+# Tutorial: Set up IPMI in a server for Remote Access.
 
-##IPMI: Basics
+## IPMI: Basics
 Abbreviated as IPMI the Intelligent Platform Management Interface was primarily developed by Intel in 1998 for remote management of servers and/or other systems via a network connection. If the server has IPMI configured and is connected to a power supply, the system administrator can send a variety of commands over the network to the server remotely. These commands can, for example, query the power state, power down or power up a server without physically operating it.
 IPMI v2.0 allows Console Redirection with enhanced encryption and access control which provides system admins with the entire 'display' of boot process redirected to them via network. This is different than SSH in the sense that system admin can directly interact with the server during booting and even change bios settings like they are physically connected to the server. IMPI is closely tied with the Baseboard Management Card (BMC) system which are operational whenever the server is connected to a power source. Thus the remote capabilities.
 
-##Installation/Configuration: Ubuntu 14.04
+## Installation/Configuration: Ubuntu 14.04
 
 In most of the servers, there is a seperate IP adress allocated for IPMI. Seperate mac addresses will be there for ethernet and IPMI. Please make sure you have IPMI capability in your server. The best way to do it is by searching the manuals.
 The commands shown here assume sudo capabilities for the user.
 
 Fisrt we will install ipmitool. IPMItool provides a simple command-line interface to IPMI-enabled devices through an IPMIv1.5 or IPMIv2.0 LAN interface or Linux/Solaris kernel driver. [Sourceforge.net](https://sourceforge.net/projects/ipmitool/).
 
-Install IPMI in all remote machines.
+### Install IPMI in all remote machines.
 ```
 apt-get install ipmitool
 ```
