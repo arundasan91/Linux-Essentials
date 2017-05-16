@@ -38,9 +38,10 @@ Open `/etc/fstab` in a text editor (`sudo vi /etc/fstab` for example) and add th
 /dev/vdb       /mount_point   ext4    defaults,nofail        0       2
 ```
 ### Step 5:
-Mount the volume
+Mount the volume and give proper rights
 ```
 mount -a
+sudo chown $USER:$USER -R /mount_point
 ```
 ### Step 6:
 Confirm volume by creating a test file in it.
