@@ -34,6 +34,10 @@ add this -->
 ```
 `/folder/folder-to-share` is the folder to share, hostname 1 and 2 denote the hostname/IP address of the local systems. A comprehensive man page for `exports` is available [here](https://linux.die.net/man/5/exports).
 
+It is a good practice to make sure that the folder that you are sharing has the correct ownership. If not, you can change the ownership using:
+```
+sudo chown username:groupname -R /folder/folder-to-share
+```
 The IP addess of local machine can be found using `ifconfig`. If a password is not set, set is using `sudo passwd $USER`.
 Before starting the NFS service, we should load the changes that we just made to the `exports` file. For that, run:
 ```
@@ -53,6 +57,10 @@ sudo apt-get install nfs-common
 We need to create a folder to mount the device to.
 ```
 mkdir -p /nfs/mountfolder
+```
+Make sure you have correct ownership for this folder too:
+```
+sudo chown username:groupname -R /nfs/mountfolder
 ```
 Mount the device to the local folder.
 ```
