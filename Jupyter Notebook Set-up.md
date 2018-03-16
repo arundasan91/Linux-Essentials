@@ -65,6 +65,12 @@ Now, update the password in the config file.
 ```
 sudo sed -i "s|#c.NotebookApp.password = u''|c.NotebookApp.password = u'$NOTE_PWD'|g" /home/$USER/.jupyter/jupyter_notebook_config.py
 ```
+UPDATE:
+There is a new method to add passwords to Jupyter notebook. In terminal execute:
+```
+jupyter notebook password
+```
+Your password will be saved as an extra JSON file separate from the `--generate-config` method.
 
 Now your notebook is configured.
 Please fire it up using `jupyter notebook`. You can use your browser and log in to `<IP_ADDRESS_OF_SYSTEM>:8888` to get the notebook interface and use your password to log in.
