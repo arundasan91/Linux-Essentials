@@ -21,5 +21,10 @@ Ever ran out os space in OpenStack cloud instances ? I know that feeling. Let us
 
 Check it out here: [Create and Mount OpenStack Volumes](https://github.com/arundasan91/Server-and-Cloud-Essentials/blob/master/Create_Volume_Chameleon_Openstack_VM.md)
 
-## 5. More to come..
+## 5. MySQL loves Python (MySQL Python setup)
+Connect MySQL databases with Python and Pandas for remote execution. 
+
+Check it out here: [MySQL Python Demo Notebook](https://github.com/arundasan91/Server-and-Cloud-Essentials/blob/master/MySQL_Python_Demo.ipynb)
+
+## 6. More to come..
 #### Find more at [GitHub.com/ArunDasan91](https://github.com/arundasan91)
