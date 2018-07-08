@@ -1,6 +1,6 @@
 #!/bin/bash
-mkdir -p $HOME/packages
-cd $HOME/packages
+mkdir -p /home/$USER/packages
+cd /home/$USER/packages
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py --user
 python3 get-pip.py --user
