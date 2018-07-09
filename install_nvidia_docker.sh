@@ -18,6 +18,7 @@ sudo add-apt-repository \
    stable"
 sudo apt-get -y update
 sudo apt-get -y install docker-ce
+sudo usermod -a -G docker $USER
 # INSTALL NVIDIA-DOCKER
 wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb
 sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
