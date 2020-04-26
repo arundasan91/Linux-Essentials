@@ -32,7 +32,7 @@ cmake \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
 -D BUILD_opencv_python2=ON \
 -D BUILD_opencv_python3=ON \
--D PYTHON2_EXECUTABLE=/usr/bin/python \  
+-D PYTHON2_EXECUTABLE=/usr/bin/python \
 -D PYTHON3_EXECUTABLE=/usr/bin/python3 \
 -D PYTHON2_LIBRARY==$(python -c "from distutils.sysconfig import get_config_var;from os.path import dirname,join ; print(join(dirname(get_config_var('LIBPC')),get_config_var('LDLIBRARY')))") \
 -D PYTHON2_NUMPY_INCLUDE_DIRS=$(python -c "import numpy; print(numpy.get_include())") \
