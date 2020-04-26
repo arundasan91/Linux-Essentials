@@ -11,5 +11,35 @@ wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip
 unzip ${OPENCV_VERSION}.zip
 mkdir opencv-${OPENCV_VERSION}/cmake_binary
 cd opencv-${OPENCV_VERSION}/cmake_binary
-cmake -DBUILD_TIFF=ON   -DBUILD_opencv_java=OFF   -DWITH_CUDA=ON   -DWITH_CUBLAS=ON -DCUDA_NVCC_FLAGS="-D_FORCE_INLINES" -DENABLE_FAST_MATH=1 -DCUDA_FAST_MATH=1 -DENABLE_AVX=ON   -DWITH_OPENGL=ON   -DWITH_OPENCL=ON   -DWITH_IPP=ON   -DWITH_TBB=ON   -DWITH_EIGEN=ON   -DWITH_V4L=ON   -DBUILD_TESTS=OFF   -DBUILD_PERF_TESTS=OFF   -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_INSTALL_PREFIX=/usr/local -DPYTHON2_EXECUTABLE=/usr/bin/python -DPYTHON3_EXECUTABLE=/usr/bin/python3 -DPYTHON2_LIBRARY='/usr/lib/x86_64-linux-gnu/libpython2.7.so' -DPYTHON2_NUMPY_INCLUDE_DIRS='/usr/lib/python2.7/dist-packages/numpy/core/include/' -D BUILD_opencv_python2=ON -D BUILD_opencv_python3=ON -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -DOPENCV_ENABLE_NONFREE=ON ..
+cmake \
+-D BUILD_TIFF=ON \
+-D BUILD_opencv_java=OFF \
+-D WITH_CUDA=ON \
+-D WITH_CUBLAS=ON \
+-D CUDA_NVCC_FLAGS="-D_FORCE_INLINES" \
+-D ENABLE_FAST_MATH=1 \
+-D CUDA_FAST_MATH=1 \
+-D ENABLE_AVX=ON \
+-D WITH_OPENGL=ON \
+-D WITH_OPENCL=ON \
+-D WITH_IPP=ON \
+-D WITH_TBB=ON \
+-D WITH_EIGEN=ON \
+-D WITH_V4L=ON \
+-D BUILD_TESTS=OFF \
+-D BUILD_PERF_TESTS=OFF \
+-D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D BUILD_opencv_python2=ON \
+-D BUILD_opencv_python3=ON \
+-D PYTHON2_EXECUTABLE=/usr/bin/python \  
+-D PYTHON3_EXECUTABLE=/usr/bin/python3 \
+-D PYTHON2_LIBRARY==$(python -c "from distutils.sysconfig import get_config_var;from os.path import dirname,join ; print(join(dirname(get_config_var('LIBPC')),get_config_var('LDLIBRARY')))") \
+-D PYTHON2_NUMPY_INCLUDE_DIRS=$(python -c "import numpy; print(numpy.get_include())") \
+-D PYTHON3_EXECUTABLE=$(which python3) \
+-D PYTHON_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+-D PYTHON_INCLUDE_DIR2=$(python3 -c "from os.path import dirname; from distutils.sysconfig import get_config_h_filename; print(dirname(get_config_h_filename()))") \
+-D PYTHON_LIBRARY=$(python3 -c "from distutils.sysconfig import get_config_var;from os.path import dirname,join ; print(join(dirname(get_config_var('LIBPC')),get_config_var('LDLIBRARY')))") \
+-D PYTHON3_NUMPY_INCLUDE_DIRS=$(python3 -c "import numpy; print(numpy.get_include())") \
+-D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -DOPENCV_ENABLE_NONFREE=ON ..
 sudo make install -j$(nproc)
