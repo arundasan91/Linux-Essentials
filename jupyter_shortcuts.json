@@ -1,0 +1,32 @@
+{"shortcuts": 
+    [
+        {
+            "command": "runmenu:restart-and-run-all",
+            "keys": [
+                "9", "9"
+            ],
+            "selector": "[data-jp-code-runner]"
+        },
+        {
+            "command": "notebook:restart-and-run-to-selected",
+            "keys": [
+                "8", "8"
+            ],
+            "selector": "[data-jp-code-runner]"
+        },
+         {
+            "command": "kernelmenu:restart-and-clear",
+            "keys": [
+                "0", "0"
+            ],
+            "selector": "[data-jp-kernel-user]:focus"
+        },
+        {
+            "command": "kernelmenu:shutdown",
+            "keys": [
+                "R", "R", "0"
+            ],
+            "selector": "[data-jp-kernel-user]:focus"
+        }
+    ]
+}
