@@ -1,4 +1,4 @@
-# Server-Essentials
+# Linux-Essentials
 Hello! I am a Computer Engineer with research orientation in Computer Architecture, Systems, Deep Learning and Cloud Computing. My day-to-day pipeline contains so much linux hacking and configurations. This repo contains some essential tools to do everyday engineering tasks a bit easier.
 
 ## 1. Jupyter Notebook Configuration
@@ -26,5 +26,7 @@ Connect MySQL databases with Python and Pandas for remote execution.
 
 Check it out here: [MySQL Python Demo Notebook](https://github.com/arundasan91/Server-and-Cloud-Essentials/blob/master/MySQL_Python_Demo.ipynb)
 
-## 6. More to come..
-#### Find more at [GitHub.com/ArunDasan91](https://github.com/arundasan91)
+## 6. Various Install scripts
+Check for `install_` tag on the filenames for installs scripts. We have opencv, mysql, etc. with more to come..
+
+#### Find some of my other projects at [GitHub.com/ArunDasan91](https://github.com/arundasan91)
