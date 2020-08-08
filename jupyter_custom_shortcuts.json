@@ -24,7 +24,7 @@
         {
             "command": "kernelmenu:shutdown",
             "keys": [
-                "R", "R", "0"
+                "K", "K", "0"
             ],
             "selector": "[data-jp-kernel-user]:focus"
         }
